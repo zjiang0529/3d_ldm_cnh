@@ -1,0 +1,18 @@
+hjson==3.1.0
+lpips==0.1.4
+monai==1.2.0
+nibabel==5.1.0
+numpy==1.24.1
+packaging==23.1
+Pillow==9.3.0
+protobuf==4.22.3
+psutil==5.9.5
+py-cpuinfo==9.0.0
+PyYAML==6.0
+scipy==1.10.1
+tensorboard==2.12.2
+torch==2.0.0
+--extra-index-url https://download.pytorch.org/whl/cu118
+torchvision==0.15.1
+tqdm==4.65.0
+xformers

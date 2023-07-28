@@ -1,0 +1,8 @@
+{
+    "data_base_dir": "/mnt/3td1/BraTS2023_CNH_NVIDIA",
+    "json_list": "./datalist/ped_dummy.json",
+    "model_dir": "/mnt/3td1/3d_ldm_cnh/trained_weights",
+    "tfevent_path": "/mnt/3td1/3d_ldm_cnh/tfevent",
+    "resume_ckpt": false,
+    "exp_name": "local_test_code"
+}

@@ -1,0 +1,8 @@
+{
+    "data_base_dir": "/workspace/datasets/BraTS2023_CNH_NVIDIA",
+    "json_list": "./datalist/ped_train_4c_f0.json",
+    "model_dir": "/workspace/3d_ldm_cnh_workspace/trained_weights/",
+    "tfevent_path": "/workspace/3d_ldm_cnh_workspace/tfevent/",
+    "resume_ckpt": false,
+    "exp_name": "ngc_160_192_128_2down"
+}

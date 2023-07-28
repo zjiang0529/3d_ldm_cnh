@@ -1,0 +1,33 @@
+{
+    "training": [
+        {
+            "label": "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00002-000/BraTS-PED-00002-000-seg.nii.gz",
+            "image": [
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00002-000/BraTS-PED-00002-000-t1n.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00002-000/BraTS-PED-00002-000-t1c.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00002-000/BraTS-PED-00002-000-t2w.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00002-000/BraTS-PED-00002-000-t2f.nii.gz"
+            ]
+        },
+        {
+            "label": "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00003-000/BraTS-PED-00003-000-seg.nii.gz",
+            "image": [
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00003-000/BraTS-PED-00003-000-t1n.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00003-000/BraTS-PED-00003-000-t1c.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00003-000/BraTS-PED-00003-000-t2w.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00003-000/BraTS-PED-00003-000-t2f.nii.gz"
+            ]
+        }
+    ],
+    "validation": [
+        {
+            "label": "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00004-000/BraTS-PED-00004-000-seg.nii.gz",
+            "image": [
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00004-000/BraTS-PED-00004-000-t1n.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00004-000/BraTS-PED-00004-000-t1c.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00004-000/BraTS-PED-00004-000-t2w.nii.gz",
+                "ASNR-MICCAI-BraTS2023-PED-Challenge-TrainingData/BraTS-PED-00004-000/BraTS-PED-00004-000-t2f.nii.gz"
+            ]
+        }
+    ]
+}

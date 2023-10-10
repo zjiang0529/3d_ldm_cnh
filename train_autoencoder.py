@@ -33,7 +33,7 @@ import numpy as np
 from torch.optim import lr_scheduler
 
 from utils import KL_loss, setup_ddp, prepare_json_dataloader, \
-    distributed_all_gather, KL_loss_or, KL_loss_or_mean, NLayerDiscriminator3D, weights_init, hinge_d_loss, \
+    distributed_all_gather, define_instance, KL_loss_or, KL_loss_or_mean, NLayerDiscriminator3D, weights_init, hinge_d_loss, \
     PerceptualLossL1, Decoder
 from visualize_image import visualize_one_slice_in_3d_image
 from torch.cuda.amp import GradScaler, autocast
@@ -203,12 +203,14 @@ def main():
         world_size=world_size,
         cache=1.0,
         download=args.download_data,
+        data_aug=True,
+        load_label=False,
     )
     data = next(iter(train_loader))
     print("Batch shape:", data["image"].shape)
     # Step 2: Define Autoencoder KL network and discriminator
-    # autoencoder = define_instance(args, "autoencoder_def").to(device)
-    autoencoder = define_autoencoder(args).to(device)
+    autoencoder = define_instance(args, "autoencoder_def").to(device)
+    # autoencoder = define_autoencoder(args).to(device)
     num_params = 0
     for param in autoencoder.parameters():
         num_params += param.numel()
@@ -252,10 +254,10 @@ def main():
             print(f"Rank {rank}: Train discriminator from scratch.")
 
     if ddp_bool:
-        autoencoder = DDP(autoencoder, device_ids=[device], output_device=rank, find_unused_parameters=True)
+        autoencoder = DDP(autoencoder, device_ids=[device], output_device=rank, find_unused_parameters=False)
         if discriminator_norm == "BATCH":
             discriminator = torch.nn.SyncBatchNorm.convert_sync_batchnorm(discriminator)
-        discriminator = DDP(discriminator, device_ids=[device], output_device=rank, find_unused_parameters=True)
+        discriminator = DDP(discriminator, device_ids=[device], output_device=rank, find_unused_parameters=False)
 
     # Step 3: training config
     if "recon_loss" in args.autoencoder_train and args.autoencoder_train["recon_loss"] == "l2":
@@ -288,12 +290,14 @@ def main():
     def lambda_rule(epoch):
         if epoch == 0:
             return 0.1
+        elif epoch > args.autoencoder_train["n_epochs"]//2:
+            return 0.1
         else:
             return 1.0
 
     scheduler_g = lr_scheduler.LambdaLR(optimizer_g, lr_lambda=lambda_rule)
 
-    optimizer_d = torch.optim.Adam(params=discriminator.parameters(), lr=args.autoencoder_train["lr"], betas=(0.5, 0.9),
+    optimizer_d = torch.optim.AdamW(params=discriminator.parameters(), lr=args.autoencoder_train["lr"], betas=(0.5, 0.9),
                                    eps=1e-06 if args.amp else 1e-08)
 
     args.tfevent_path = os.path.join(args.tfevent_path, args.exp_name)
@@ -315,8 +319,10 @@ def main():
 
     if args.amp:
         # test use mean reduction for everything
-        scaler_g = GradScaler(init_scale=2. ** 8, growth_factor=1.5)
-        scaler_d = GradScaler(init_scale=2. ** 8, growth_factor=1.5)
+        # scaler_g = GradScaler(init_scale=2. ** 8, growth_factor=1.5)
+        # scaler_d = GradScaler(init_scale=2. ** 8, growth_factor=1.5)
+        scaler_g = GradScaler()
+        scaler_d = GradScaler()
 
     for epoch in range(n_epochs):
         # train
@@ -345,12 +351,14 @@ def main():
                 # test use mean reduction for everything
                 nll_loss = recons_loss
                 kl_loss = KL_loss(z_mu, z_sigma)
+                z_mu, z_sigma = None, None
 
                 loss_g = nll_loss + kl_weight * kl_loss + perceptual_weight * p_loss
 
                 if epoch > autoencoder_warm_up_n_epochs:
                     logits_fake = discriminator(reconstruction.contiguous())[-1]
                     generator_loss = adv_loss(logits_fake, target_is_real=True, for_discriminator=False)
+                    logits_fake = None
                     d_weight = torch.tensor(1.0).to(device)
 
                     loss_g = loss_g + d_weight * adv_weight * generator_loss
@@ -364,6 +372,7 @@ def main():
             else:
                 loss_g.backward()
                 optimizer_g.step()
+            loss_g = loss_g.detach().cpu()
 
             if epoch > autoencoder_warm_up_n_epochs:
                 # train Discriminator part
@@ -372,8 +381,10 @@ def main():
 
                     logits_fake = discriminator(reconstruction.contiguous().detach())[-1]
                     loss_d_fake = adv_loss(logits_fake, target_is_real=False, for_discriminator=True)
+                    logits_fake = logits_fake.detach().cpu()
                     logits_real = discriminator(images.contiguous().detach())[-1]
                     loss_d_real = adv_loss(logits_real, target_is_real=True, for_discriminator=True)
+                    logits_real = logits_real.detach().cpu()
                     discriminator_loss = (loss_d_fake + loss_d_real) * 0.5
                     loss_d = adv_weight * discriminator_loss
 
@@ -384,6 +395,9 @@ def main():
                 else:
                     loss_d.backward()
                     optimizer_d.step()
+                loss_d = loss_d.detach().cpu()
+
+            torch.cuda.empty_cache()
 
             # write train loss for each batch into tensorboard
             if rank == 0:
@@ -402,10 +416,10 @@ def main():
                                                   discriminator_loss.detach().cpu().item(),
                                                   total_step)
                     tensorboard_writer.add_scalar("train/train_logit_fake_iter",
-                                                  logits_fake.detach().cpu().mean().item(),
+                                                  logits_fake.mean().item(),
                                                   total_step)
                     tensorboard_writer.add_scalar("train/train_logit_real_iter",
-                                                  logits_real.detach().cpu().mean().item(),
+                                                  logits_real.mean().item(),
                                                   total_step)
                     tensorboard_writer.add_scalar("train/d_weight",
                                                   d_weight.detach().cpu().item(),
@@ -433,6 +447,7 @@ def main():
                         time_left,
                     )
                 )
+
         scheduler_g.step()
         # validation
         if epoch % val_interval == 0:
@@ -443,7 +458,7 @@ def main():
                 images = batch["image"].to(device)  # choose only one of Brats channels
                 with torch.no_grad():
                     with autocast(enabled=args.amp):
-                        reconstruction, z_mu, z_sigma = autoencoder(images)
+                        reconstruction, _, _ = autoencoder(images)
                         recons_loss = intensity_loss(reconstruction.contiguous(), images.contiguous())
                         # compute loss_perceptual for each modality
                         p_loss = 0

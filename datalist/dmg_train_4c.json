@@ -1,0 +1,944 @@
+{
+    "training": [
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1037_2mo/1037_2mo-t1n.nii.gz",
+                "DMG_generative_94/1037_2mo/1037_2mo-t1c.nii.gz",
+                "DMG_generative_94/1037_2mo/1037_2mo-t2w.nii.gz",
+                "DMG_generative_94/1037_2mo/1037_2mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1037_2mo/1037_2mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1269_1mo/1269_1mo-t1n.nii.gz",
+                "DMG_generative_94/1269_1mo/1269_1mo-t1c.nii.gz",
+                "DMG_generative_94/1269_1mo/1269_1mo-t2w.nii.gz",
+                "DMG_generative_94/1269_1mo/1269_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1269_1mo/1269_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1274_1mo/1274_1mo-t1n.nii.gz",
+                "DMG_generative_94/1274_1mo/1274_1mo-t1c.nii.gz",
+                "DMG_generative_94/1274_1mo/1274_1mo-t2w.nii.gz",
+                "DMG_generative_94/1274_1mo/1274_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1274_1mo/1274_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1368_1mo/1368_1mo-t1n.nii.gz",
+                "DMG_generative_94/1368_1mo/1368_1mo-t1c.nii.gz",
+                "DMG_generative_94/1368_1mo/1368_1mo-t2w.nii.gz",
+                "DMG_generative_94/1368_1mo/1368_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1368_1mo/1368_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1446_1mo/1446_1mo-t1n.nii.gz",
+                "DMG_generative_94/1446_1mo/1446_1mo-t1c.nii.gz",
+                "DMG_generative_94/1446_1mo/1446_1mo-t2w.nii.gz",
+                "DMG_generative_94/1446_1mo/1446_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1446_1mo/1446_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1578_1mo/1578_1mo-t1n.nii.gz",
+                "DMG_generative_94/1578_1mo/1578_1mo-t1c.nii.gz",
+                "DMG_generative_94/1578_1mo/1578_1mo-t2w.nii.gz",
+                "DMG_generative_94/1578_1mo/1578_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1578_1mo/1578_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1711_diag/1711_diag-t1n.nii.gz",
+                "DMG_generative_94/1711_diag/1711_diag-t1c.nii.gz",
+                "DMG_generative_94/1711_diag/1711_diag-t2w.nii.gz",
+                "DMG_generative_94/1711_diag/1711_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1711_diag/1711_diag-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1717_diag/1717_diag-t1n.nii.gz",
+                "DMG_generative_94/1717_diag/1717_diag-t1c.nii.gz",
+                "DMG_generative_94/1717_diag/1717_diag-t2w.nii.gz",
+                "DMG_generative_94/1717_diag/1717_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1717_diag/1717_diag-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1855_diag/1855_diag-t1n.nii.gz",
+                "DMG_generative_94/1855_diag/1855_diag-t1c.nii.gz",
+                "DMG_generative_94/1855_diag/1855_diag-t2w.nii.gz",
+                "DMG_generative_94/1855_diag/1855_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1855_diag/1855_diag-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/1895_2mo/1895_2mo-t1n.nii.gz",
+                "DMG_generative_94/1895_2mo/1895_2mo-t1c.nii.gz",
+                "DMG_generative_94/1895_2mo/1895_2mo-t2w.nii.gz",
+                "DMG_generative_94/1895_2mo/1895_2mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1895_2mo/1895_2mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/674_diag/674_diag-t1n.nii.gz",
+                "DMG_generative_94/674_diag/674_diag-t1c.nii.gz",
+                "DMG_generative_94/674_diag/674_diag-t2w.nii.gz",
+                "DMG_generative_94/674_diag/674_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/674_diag/674_diag-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/675_1mo/675_1mo-t1n.nii.gz",
+                "DMG_generative_94/675_1mo/675_1mo-t1c.nii.gz",
+                "DMG_generative_94/675_1mo/675_1mo-t2w.nii.gz",
+                "DMG_generative_94/675_1mo/675_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/675_1mo/675_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/738_1mo/738_1mo-t1n.nii.gz",
+                "DMG_generative_94/738_1mo/738_1mo-t1c.nii.gz",
+                "DMG_generative_94/738_1mo/738_1mo-t2w.nii.gz",
+                "DMG_generative_94/738_1mo/738_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/738_1mo/738_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/765_diag/765_diag-t1n.nii.gz",
+                "DMG_generative_94/765_diag/765_diag-t1c.nii.gz",
+                "DMG_generative_94/765_diag/765_diag-t2w.nii.gz",
+                "DMG_generative_94/765_diag/765_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/765_diag/765_diag-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/874_1mo/874_1mo-t1n.nii.gz",
+                "DMG_generative_94/874_1mo/874_1mo-t1c.nii.gz",
+                "DMG_generative_94/874_1mo/874_1mo-t2w.nii.gz",
+                "DMG_generative_94/874_1mo/874_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/874_1mo/874_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/910_1mo/910_1mo-t1n.nii.gz",
+                "DMG_generative_94/910_1mo/910_1mo-t1c.nii.gz",
+                "DMG_generative_94/910_1mo/910_1mo-t2w.nii.gz",
+                "DMG_generative_94/910_1mo/910_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/910_1mo/910_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/910_diag/910_diag-t1n.nii.gz",
+                "DMG_generative_94/910_diag/910_diag-t1c.nii.gz",
+                "DMG_generative_94/910_diag/910_diag-t2w.nii.gz",
+                "DMG_generative_94/910_diag/910_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/910_diag/910_diag-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/PID2_1mo/PID2_1mo-t1n.nii.gz",
+                "DMG_generative_94/PID2_1mo/PID2_1mo-t1c.nii.gz",
+                "DMG_generative_94/PID2_1mo/PID2_1mo-t2w.nii.gz",
+                "DMG_generative_94/PID2_1mo/PID2_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/PID2_1mo/PID2_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": [
+                "DMG_generative_94/PID5_2mo/PID5_2mo-t1n.nii.gz",
+                "DMG_generative_94/PID5_2mo/PID5_2mo-t1c.nii.gz",
+                "DMG_generative_94/PID5_2mo/PID5_2mo-t2w.nii.gz",
+                "DMG_generative_94/PID5_2mo/PID5_2mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/PID5_2mo/PID5_2mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/112_1mo/112_1mo-t1n.nii.gz",
+                "DMG_generative_94/112_1mo/112_1mo-t1c.nii.gz",
+                "DMG_generative_94/112_1mo/112_1mo-t2w.nii.gz",
+                "DMG_generative_94/112_1mo/112_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/112_1mo/112_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1234_4mo/1234_4mo-t1n.nii.gz",
+                "DMG_generative_94/1234_4mo/1234_4mo-t1c.nii.gz",
+                "DMG_generative_94/1234_4mo/1234_4mo-t2w.nii.gz",
+                "DMG_generative_94/1234_4mo/1234_4mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1234_4mo/1234_4mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1458_diag/1458_diag-t1n.nii.gz",
+                "DMG_generative_94/1458_diag/1458_diag-t1c.nii.gz",
+                "DMG_generative_94/1458_diag/1458_diag-t2w.nii.gz",
+                "DMG_generative_94/1458_diag/1458_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1458_diag/1458_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1601_3mo/1601_3mo-t1n.nii.gz",
+                "DMG_generative_94/1601_3mo/1601_3mo-t1c.nii.gz",
+                "DMG_generative_94/1601_3mo/1601_3mo-t2w.nii.gz",
+                "DMG_generative_94/1601_3mo/1601_3mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1601_3mo/1601_3mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1609_1mo/1609_1mo-t1n.nii.gz",
+                "DMG_generative_94/1609_1mo/1609_1mo-t1c.nii.gz",
+                "DMG_generative_94/1609_1mo/1609_1mo-t2w.nii.gz",
+                "DMG_generative_94/1609_1mo/1609_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1609_1mo/1609_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1609_diag/1609_diag-t1n.nii.gz",
+                "DMG_generative_94/1609_diag/1609_diag-t1c.nii.gz",
+                "DMG_generative_94/1609_diag/1609_diag-t2w.nii.gz",
+                "DMG_generative_94/1609_diag/1609_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1609_diag/1609_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1805_diag/1805_diag-t1n.nii.gz",
+                "DMG_generative_94/1805_diag/1805_diag-t1c.nii.gz",
+                "DMG_generative_94/1805_diag/1805_diag-t2w.nii.gz",
+                "DMG_generative_94/1805_diag/1805_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1805_diag/1805_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1821_1mo/1821_1mo-t1n.nii.gz",
+                "DMG_generative_94/1821_1mo/1821_1mo-t1c.nii.gz",
+                "DMG_generative_94/1821_1mo/1821_1mo-t2w.nii.gz",
+                "DMG_generative_94/1821_1mo/1821_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1821_1mo/1821_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1821_diag/1821_diag-t1n.nii.gz",
+                "DMG_generative_94/1821_diag/1821_diag-t1c.nii.gz",
+                "DMG_generative_94/1821_diag/1821_diag-t2w.nii.gz",
+                "DMG_generative_94/1821_diag/1821_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1821_diag/1821_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1839_diag/1839_diag-t1n.nii.gz",
+                "DMG_generative_94/1839_diag/1839_diag-t1c.nii.gz",
+                "DMG_generative_94/1839_diag/1839_diag-t2w.nii.gz",
+                "DMG_generative_94/1839_diag/1839_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1839_diag/1839_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1889_diag/1889_diag-t1n.nii.gz",
+                "DMG_generative_94/1889_diag/1889_diag-t1c.nii.gz",
+                "DMG_generative_94/1889_diag/1889_diag-t2w.nii.gz",
+                "DMG_generative_94/1889_diag/1889_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1889_diag/1889_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/1895_1mo/1895_1mo-t1n.nii.gz",
+                "DMG_generative_94/1895_1mo/1895_1mo-t1c.nii.gz",
+                "DMG_generative_94/1895_1mo/1895_1mo-t2w.nii.gz",
+                "DMG_generative_94/1895_1mo/1895_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1895_1mo/1895_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/744_diag/744_diag-t1n.nii.gz",
+                "DMG_generative_94/744_diag/744_diag-t1c.nii.gz",
+                "DMG_generative_94/744_diag/744_diag-t2w.nii.gz",
+                "DMG_generative_94/744_diag/744_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/744_diag/744_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/787_1mo/787_1mo-t1n.nii.gz",
+                "DMG_generative_94/787_1mo/787_1mo-t1c.nii.gz",
+                "DMG_generative_94/787_1mo/787_1mo-t2w.nii.gz",
+                "DMG_generative_94/787_1mo/787_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/787_1mo/787_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/874_diag/874_diag-t1n.nii.gz",
+                "DMG_generative_94/874_diag/874_diag-t1c.nii.gz",
+                "DMG_generative_94/874_diag/874_diag-t2w.nii.gz",
+                "DMG_generative_94/874_diag/874_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/874_diag/874_diag-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/933_1mo/933_1mo-t1n.nii.gz",
+                "DMG_generative_94/933_1mo/933_1mo-t1c.nii.gz",
+                "DMG_generative_94/933_1mo/933_1mo-t2w.nii.gz",
+                "DMG_generative_94/933_1mo/933_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/933_1mo/933_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/967_1mo/967_1mo-t1n.nii.gz",
+                "DMG_generative_94/967_1mo/967_1mo-t1c.nii.gz",
+                "DMG_generative_94/967_1mo/967_1mo-t2w.nii.gz",
+                "DMG_generative_94/967_1mo/967_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/967_1mo/967_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/999_1mo/999_1mo-t1n.nii.gz",
+                "DMG_generative_94/999_1mo/999_1mo-t1c.nii.gz",
+                "DMG_generative_94/999_1mo/999_1mo-t2w.nii.gz",
+                "DMG_generative_94/999_1mo/999_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/999_1mo/999_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": [
+                "DMG_generative_94/PID1_1mo/PID1_1mo-t1n.nii.gz",
+                "DMG_generative_94/PID1_1mo/PID1_1mo-t1c.nii.gz",
+                "DMG_generative_94/PID1_1mo/PID1_1mo-t2w.nii.gz",
+                "DMG_generative_94/PID1_1mo/PID1_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/PID1_1mo/PID1_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1020_2mo/1020_2mo-t1n.nii.gz",
+                "DMG_generative_94/1020_2mo/1020_2mo-t1c.nii.gz",
+                "DMG_generative_94/1020_2mo/1020_2mo-t2w.nii.gz",
+                "DMG_generative_94/1020_2mo/1020_2mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1020_2mo/1020_2mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/112_diag/112_diag-t1n.nii.gz",
+                "DMG_generative_94/112_diag/112_diag-t1c.nii.gz",
+                "DMG_generative_94/112_diag/112_diag-t2w.nii.gz",
+                "DMG_generative_94/112_diag/112_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/112_diag/112_diag-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1234_1mo/1234_1mo-t1n.nii.gz",
+                "DMG_generative_94/1234_1mo/1234_1mo-t1c.nii.gz",
+                "DMG_generative_94/1234_1mo/1234_1mo-t2w.nii.gz",
+                "DMG_generative_94/1234_1mo/1234_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1234_1mo/1234_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1317_1mo/1317_1mo-t1n.nii.gz",
+                "DMG_generative_94/1317_1mo/1317_1mo-t1c.nii.gz",
+                "DMG_generative_94/1317_1mo/1317_1mo-t2w.nii.gz",
+                "DMG_generative_94/1317_1mo/1317_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1317_1mo/1317_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1390_diag/1390_diag-t1n.nii.gz",
+                "DMG_generative_94/1390_diag/1390_diag-t1c.nii.gz",
+                "DMG_generative_94/1390_diag/1390_diag-t2w.nii.gz",
+                "DMG_generative_94/1390_diag/1390_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1390_diag/1390_diag-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1458_1mo/1458_1mo-t1n.nii.gz",
+                "DMG_generative_94/1458_1mo/1458_1mo-t1c.nii.gz",
+                "DMG_generative_94/1458_1mo/1458_1mo-t2w.nii.gz",
+                "DMG_generative_94/1458_1mo/1458_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1458_1mo/1458_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1578_diag/1578_diag-t1n.nii.gz",
+                "DMG_generative_94/1578_diag/1578_diag-t1c.nii.gz",
+                "DMG_generative_94/1578_diag/1578_diag-t2w.nii.gz",
+                "DMG_generative_94/1578_diag/1578_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1578_diag/1578_diag-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1711_1mo/1711_1mo-t1n.nii.gz",
+                "DMG_generative_94/1711_1mo/1711_1mo-t1c.nii.gz",
+                "DMG_generative_94/1711_1mo/1711_1mo-t2w.nii.gz",
+                "DMG_generative_94/1711_1mo/1711_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1711_1mo/1711_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1725_22mo/1725_22mo-t1n.nii.gz",
+                "DMG_generative_94/1725_22mo/1725_22mo-t1c.nii.gz",
+                "DMG_generative_94/1725_22mo/1725_22mo-t2w.nii.gz",
+                "DMG_generative_94/1725_22mo/1725_22mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1725_22mo/1725_22mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1725_29mo/1725_29mo-t1n.nii.gz",
+                "DMG_generative_94/1725_29mo/1725_29mo-t1c.nii.gz",
+                "DMG_generative_94/1725_29mo/1725_29mo-t2w.nii.gz",
+                "DMG_generative_94/1725_29mo/1725_29mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1725_29mo/1725_29mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1765_6mo/1765_6mo-t1n.nii.gz",
+                "DMG_generative_94/1765_6mo/1765_6mo-t1c.nii.gz",
+                "DMG_generative_94/1765_6mo/1765_6mo-t2w.nii.gz",
+                "DMG_generative_94/1765_6mo/1765_6mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1765_6mo/1765_6mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1805_1mo/1805_1mo-t1n.nii.gz",
+                "DMG_generative_94/1805_1mo/1805_1mo-t1c.nii.gz",
+                "DMG_generative_94/1805_1mo/1805_1mo-t2w.nii.gz",
+                "DMG_generative_94/1805_1mo/1805_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1805_1mo/1805_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1805_3mo/1805_3mo-t1n.nii.gz",
+                "DMG_generative_94/1805_3mo/1805_3mo-t1c.nii.gz",
+                "DMG_generative_94/1805_3mo/1805_3mo-t2w.nii.gz",
+                "DMG_generative_94/1805_3mo/1805_3mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1805_3mo/1805_3mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1855_2mo/1855_2mo-t1n.nii.gz",
+                "DMG_generative_94/1855_2mo/1855_2mo-t1c.nii.gz",
+                "DMG_generative_94/1855_2mo/1855_2mo-t2w.nii.gz",
+                "DMG_generative_94/1855_2mo/1855_2mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1855_2mo/1855_2mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/1889_3mo/1889_3mo-t1n.nii.gz",
+                "DMG_generative_94/1889_3mo/1889_3mo-t1c.nii.gz",
+                "DMG_generative_94/1889_3mo/1889_3mo-t2w.nii.gz",
+                "DMG_generative_94/1889_3mo/1889_3mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1889_3mo/1889_3mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/586_diag/586_diag-t1n.nii.gz",
+                "DMG_generative_94/586_diag/586_diag-t1c.nii.gz",
+                "DMG_generative_94/586_diag/586_diag-t2w.nii.gz",
+                "DMG_generative_94/586_diag/586_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/586_diag/586_diag-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/739_1mo/739_1mo-t1n.nii.gz",
+                "DMG_generative_94/739_1mo/739_1mo-t1c.nii.gz",
+                "DMG_generative_94/739_1mo/739_1mo-t2w.nii.gz",
+                "DMG_generative_94/739_1mo/739_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/739_1mo/739_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/929_diag/929_diag-t1n.nii.gz",
+                "DMG_generative_94/929_diag/929_diag-t1c.nii.gz",
+                "DMG_generative_94/929_diag/929_diag-t2w.nii.gz",
+                "DMG_generative_94/929_diag/929_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/929_diag/929_diag-seg.nii.gz"
+        },
+        {
+            "fold": 2,
+            "image": [
+                "DMG_generative_94/967_diag/967_diag-t1n.nii.gz",
+                "DMG_generative_94/967_diag/967_diag-t1c.nii.gz",
+                "DMG_generative_94/967_diag/967_diag-t2w.nii.gz",
+                "DMG_generative_94/967_diag/967_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/967_diag/967_diag-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1034_1mo/1034_1mo-t1n.nii.gz",
+                "DMG_generative_94/1034_1mo/1034_1mo-t1c.nii.gz",
+                "DMG_generative_94/1034_1mo/1034_1mo-t2w.nii.gz",
+                "DMG_generative_94/1034_1mo/1034_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1034_1mo/1034_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1277_diag/1277_diag-t1n.nii.gz",
+                "DMG_generative_94/1277_diag/1277_diag-t1c.nii.gz",
+                "DMG_generative_94/1277_diag/1277_diag-t2w.nii.gz",
+                "DMG_generative_94/1277_diag/1277_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1277_diag/1277_diag-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1390_1mo/1390_1mo-t1n.nii.gz",
+                "DMG_generative_94/1390_1mo/1390_1mo-t1c.nii.gz",
+                "DMG_generative_94/1390_1mo/1390_1mo-t2w.nii.gz",
+                "DMG_generative_94/1390_1mo/1390_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1390_1mo/1390_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1476_1mo/1476_1mo-t1n.nii.gz",
+                "DMG_generative_94/1476_1mo/1476_1mo-t1c.nii.gz",
+                "DMG_generative_94/1476_1mo/1476_1mo-t2w.nii.gz",
+                "DMG_generative_94/1476_1mo/1476_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1476_1mo/1476_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1569_1mo/1569_1mo-t1n.nii.gz",
+                "DMG_generative_94/1569_1mo/1569_1mo-t1c.nii.gz",
+                "DMG_generative_94/1569_1mo/1569_1mo-t2w.nii.gz",
+                "DMG_generative_94/1569_1mo/1569_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1569_1mo/1569_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1711_1wk/1711_1wk-t1n.nii.gz",
+                "DMG_generative_94/1711_1wk/1711_1wk-t1c.nii.gz",
+                "DMG_generative_94/1711_1wk/1711_1wk-t2w.nii.gz",
+                "DMG_generative_94/1711_1wk/1711_1wk-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1711_1wk/1711_1wk-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1717_1mo/1717_1mo-t1n.nii.gz",
+                "DMG_generative_94/1717_1mo/1717_1mo-t1c.nii.gz",
+                "DMG_generative_94/1717_1mo/1717_1mo-t2w.nii.gz",
+                "DMG_generative_94/1717_1mo/1717_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1717_1mo/1717_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1717_2mo/1717_2mo-t1n.nii.gz",
+                "DMG_generative_94/1717_2mo/1717_2mo-t1c.nii.gz",
+                "DMG_generative_94/1717_2mo/1717_2mo-t2w.nii.gz",
+                "DMG_generative_94/1717_2mo/1717_2mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1717_2mo/1717_2mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1855_1mo/1855_1mo-t1n.nii.gz",
+                "DMG_generative_94/1855_1mo/1855_1mo-t1c.nii.gz",
+                "DMG_generative_94/1855_1mo/1855_1mo-t2w.nii.gz",
+                "DMG_generative_94/1855_1mo/1855_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1855_1mo/1855_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1889_1mo/1889_1mo-t1n.nii.gz",
+                "DMG_generative_94/1889_1mo/1889_1mo-t1c.nii.gz",
+                "DMG_generative_94/1889_1mo/1889_1mo-t2w.nii.gz",
+                "DMG_generative_94/1889_1mo/1889_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1889_1mo/1889_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/1895_diag/1895_diag-t1n.nii.gz",
+                "DMG_generative_94/1895_diag/1895_diag-t1c.nii.gz",
+                "DMG_generative_94/1895_diag/1895_diag-t2w.nii.gz",
+                "DMG_generative_94/1895_diag/1895_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1895_diag/1895_diag-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/760_1mo/760_1mo-t1n.nii.gz",
+                "DMG_generative_94/760_1mo/760_1mo-t1c.nii.gz",
+                "DMG_generative_94/760_1mo/760_1mo-t2w.nii.gz",
+                "DMG_generative_94/760_1mo/760_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/760_1mo/760_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/761_1mo/761_1mo-t1n.nii.gz",
+                "DMG_generative_94/761_1mo/761_1mo-t1c.nii.gz",
+                "DMG_generative_94/761_1mo/761_1mo-t2w.nii.gz",
+                "DMG_generative_94/761_1mo/761_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/761_1mo/761_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/764_1mo/764_1mo-t1n.nii.gz",
+                "DMG_generative_94/764_1mo/764_1mo-t1c.nii.gz",
+                "DMG_generative_94/764_1mo/764_1mo-t2w.nii.gz",
+                "DMG_generative_94/764_1mo/764_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/764_1mo/764_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/787_diag/787_diag-t1n.nii.gz",
+                "DMG_generative_94/787_diag/787_diag-t1c.nii.gz",
+                "DMG_generative_94/787_diag/787_diag-t2w.nii.gz",
+                "DMG_generative_94/787_diag/787_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/787_diag/787_diag-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/929_1mo/929_1mo-t1n.nii.gz",
+                "DMG_generative_94/929_1mo/929_1mo-t1c.nii.gz",
+                "DMG_generative_94/929_1mo/929_1mo-t2w.nii.gz",
+                "DMG_generative_94/929_1mo/929_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/929_1mo/929_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/PID1_diag/PID1_diag-t1n.nii.gz",
+                "DMG_generative_94/PID1_diag/PID1_diag-t1c.nii.gz",
+                "DMG_generative_94/PID1_diag/PID1_diag-t2w.nii.gz",
+                "DMG_generative_94/PID1_diag/PID1_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/PID1_diag/PID1_diag-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/PID3_diag/PID3_diag-t1n.nii.gz",
+                "DMG_generative_94/PID3_diag/PID3_diag-t1c.nii.gz",
+                "DMG_generative_94/PID3_diag/PID3_diag-t2w.nii.gz",
+                "DMG_generative_94/PID3_diag/PID3_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/PID3_diag/PID3_diag-seg.nii.gz"
+        },
+        {
+            "fold": 3,
+            "image": [
+                "DMG_generative_94/PID4_1mo/PID4_1mo-t1n.nii.gz",
+                "DMG_generative_94/PID4_1mo/PID4_1mo-t1c.nii.gz",
+                "DMG_generative_94/PID4_1mo/PID4_1mo-t2w.nii.gz",
+                "DMG_generative_94/PID4_1mo/PID4_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/PID4_1mo/PID4_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1277_1mo/1277_1mo-t1n.nii.gz",
+                "DMG_generative_94/1277_1mo/1277_1mo-t1c.nii.gz",
+                "DMG_generative_94/1277_1mo/1277_1mo-t2w.nii.gz",
+                "DMG_generative_94/1277_1mo/1277_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1277_1mo/1277_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1317_diag/1317_diag-t1n.nii.gz",
+                "DMG_generative_94/1317_diag/1317_diag-t1c.nii.gz",
+                "DMG_generative_94/1317_diag/1317_diag-t2w.nii.gz",
+                "DMG_generative_94/1317_diag/1317_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1317_diag/1317_diag-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1569_diag/1569_diag-t1n.nii.gz",
+                "DMG_generative_94/1569_diag/1569_diag-t1c.nii.gz",
+                "DMG_generative_94/1569_diag/1569_diag-t2w.nii.gz",
+                "DMG_generative_94/1569_diag/1569_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1569_diag/1569_diag-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1601_diag/1601_diag-t1n.nii.gz",
+                "DMG_generative_94/1601_diag/1601_diag-t1c.nii.gz",
+                "DMG_generative_94/1601_diag/1601_diag-t2w.nii.gz",
+                "DMG_generative_94/1601_diag/1601_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1601_diag/1601_diag-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1725_diag/1725_diag-t1n.nii.gz",
+                "DMG_generative_94/1725_diag/1725_diag-t1c.nii.gz",
+                "DMG_generative_94/1725_diag/1725_diag-t2w.nii.gz",
+                "DMG_generative_94/1725_diag/1725_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1725_diag/1725_diag-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1765_1mo/1765_1mo-t1n.nii.gz",
+                "DMG_generative_94/1765_1mo/1765_1mo-t1c.nii.gz",
+                "DMG_generative_94/1765_1mo/1765_1mo-t2w.nii.gz",
+                "DMG_generative_94/1765_1mo/1765_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1765_1mo/1765_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1765_diag/1765_diag-t1n.nii.gz",
+                "DMG_generative_94/1765_diag/1765_diag-t1c.nii.gz",
+                "DMG_generative_94/1765_diag/1765_diag-t2w.nii.gz",
+                "DMG_generative_94/1765_diag/1765_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1765_diag/1765_diag-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1821_4mo/1821_4mo-t1n.nii.gz",
+                "DMG_generative_94/1821_4mo/1821_4mo-t1c.nii.gz",
+                "DMG_generative_94/1821_4mo/1821_4mo-t2w.nii.gz",
+                "DMG_generative_94/1821_4mo/1821_4mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1821_4mo/1821_4mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1839_1mo/1839_1mo-t1n.nii.gz",
+                "DMG_generative_94/1839_1mo/1839_1mo-t1c.nii.gz",
+                "DMG_generative_94/1839_1mo/1839_1mo-t2w.nii.gz",
+                "DMG_generative_94/1839_1mo/1839_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1839_1mo/1839_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/1839_3mo/1839_3mo-t1n.nii.gz",
+                "DMG_generative_94/1839_3mo/1839_3mo-t1c.nii.gz",
+                "DMG_generative_94/1839_3mo/1839_3mo-t2w.nii.gz",
+                "DMG_generative_94/1839_3mo/1839_3mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/1839_3mo/1839_3mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/586_2mo/586_2mo-t1n.nii.gz",
+                "DMG_generative_94/586_2mo/586_2mo-t1c.nii.gz",
+                "DMG_generative_94/586_2mo/586_2mo-t2w.nii.gz",
+                "DMG_generative_94/586_2mo/586_2mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/586_2mo/586_2mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/741_1mo/741_1mo-t1n.nii.gz",
+                "DMG_generative_94/741_1mo/741_1mo-t1c.nii.gz",
+                "DMG_generative_94/741_1mo/741_1mo-t2w.nii.gz",
+                "DMG_generative_94/741_1mo/741_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/741_1mo/741_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/744_1mo/744_1mo-t1n.nii.gz",
+                "DMG_generative_94/744_1mo/744_1mo-t1c.nii.gz",
+                "DMG_generative_94/744_1mo/744_1mo-t2w.nii.gz",
+                "DMG_generative_94/744_1mo/744_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/744_1mo/744_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/758_1mo/758_1mo-t1n.nii.gz",
+                "DMG_generative_94/758_1mo/758_1mo-t1c.nii.gz",
+                "DMG_generative_94/758_1mo/758_1mo-t2w.nii.gz",
+                "DMG_generative_94/758_1mo/758_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/758_1mo/758_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/762_1mo/762_1mo-t1n.nii.gz",
+                "DMG_generative_94/762_1mo/762_1mo-t1c.nii.gz",
+                "DMG_generative_94/762_1mo/762_1mo-t2w.nii.gz",
+                "DMG_generative_94/762_1mo/762_1mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/762_1mo/762_1mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/765_5mo/765_5mo-t1n.nii.gz",
+                "DMG_generative_94/765_5mo/765_5mo-t1c.nii.gz",
+                "DMG_generative_94/765_5mo/765_5mo-t2w.nii.gz",
+                "DMG_generative_94/765_5mo/765_5mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/765_5mo/765_5mo-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/933_diag/933_diag-t1n.nii.gz",
+                "DMG_generative_94/933_diag/933_diag-t1c.nii.gz",
+                "DMG_generative_94/933_diag/933_diag-t2w.nii.gz",
+                "DMG_generative_94/933_diag/933_diag-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/933_diag/933_diag-seg.nii.gz"
+        },
+        {
+            "fold": 4,
+            "image": [
+                "DMG_generative_94/PID3_4mo/PID3_4mo-t1n.nii.gz",
+                "DMG_generative_94/PID3_4mo/PID3_4mo-t1c.nii.gz",
+                "DMG_generative_94/PID3_4mo/PID3_4mo-t2w.nii.gz",
+                "DMG_generative_94/PID3_4mo/PID3_4mo-t2f.nii.gz"
+            ],
+            "label": "DMG_generative_94/PID3_4mo/PID3_4mo-seg.nii.gz"
+        }
+    ]
+}

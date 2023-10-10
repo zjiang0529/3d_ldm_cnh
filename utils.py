@@ -74,6 +74,53 @@ def add_data_dir2path(list_files, data_dir):
             files.append({"image": str_img, "label": str_seg})
     return copy.deepcopy(files)
 
+def add_data_dir2path_fold(json_data, data_dir, fold):
+    list_train = []
+    list_valid = []
+    for item in json_data['training']:
+        if item["fold"] == fold:
+            item.pop("fold", None)
+            list_valid.append(item)
+        else:
+            item.pop("fold", None)
+            list_train.append(item)
+
+    files = []
+    for _i in range(len(list_train)):
+
+        if isinstance(list_train[_i]["image"], list):
+            str_img = [os.path.join(data_dir, list_train[_i]["image"][j]) for j in
+                       range(len(list_train[_i]["image"], ))]
+            str_seg = os.path.join(data_dir, list_train[_i]["label"])
+
+        else:
+            str_img = os.path.join(data_dir, list_train[_i]["image"])
+            str_seg = os.path.join(data_dir, list_train[_i]["label"])
+
+        # if (not os.path.exists(str_img)) or (not os.path.exists(str_seg)):
+        #     continue
+
+        files.append({"image": str_img, "label": str_seg})
+
+    train_files = copy.deepcopy(files)
+
+    files = []
+    for _i in range(len(list_valid)):
+        if isinstance(list_valid[_i]["image"], list):
+            str_img = [os.path.join(data_dir, list_valid[_i]["image"][j]) for j in
+                       range(len(list_valid[_i]["image"], ))]
+            str_seg = os.path.join(data_dir, list_valid[_i]["label"])
+        else:
+            str_img = os.path.join(data_dir, list_valid[_i]["image"])
+            str_seg = os.path.join(data_dir, list_valid[_i]["label"])
+
+        # if (not os.path.exists(str_img)) or (not os.path.exists(str_seg)):
+        #     continue
+
+        files.append({"image": str_img, "label": str_seg})
+    val_files = copy.deepcopy(files)
+
+    return train_files, val_files
 
 def prepare_json_dataloader(
         args,
@@ -83,30 +130,51 @@ def prepare_json_dataloader(
         cache=1.0,
         download=False,
         is_inference=False,
-        data_aug=True,
+        data_aug=False,
+        fold=0,
+        load_label=True,
 ):
     ddp_bool = world_size > 1
 
-    with open(args.json_list, "r") as f:
-        json_data = json.load(f)
+    if isinstance(args.json_list, list):
+        assert isinstance(args.data_base_dir, list)
+        list_train = []
+        list_valid = []
+        for json_list, data_base_dir in zip(args.json_list, args.data_base_dir):
+            with open(json_list, "r") as f:
+                json_data = json.load(f)
+            train, val = add_data_dir2path_fold(json_data, data_base_dir, fold=fold)
+            list_train += train
+            list_valid += val
+    else:
+        with open(args.json_list, "r") as f:
+            json_data = json.load(f)
 
-    list_train = add_data_dir2path(json_data['training'], args.data_base_dir)
-    list_valid = add_data_dir2path(json_data['validation'], args.data_base_dir)
+        list_train = add_data_dir2path(json_data['training'], args.data_base_dir)
+        list_valid = add_data_dir2path(json_data['validation'], args.data_base_dir)
+
+    print(f"Training files:{len(list_train)}, Val files:{len(list_valid)}")
 
     compute_dtype = torch.float32
 
+    if load_label:
+        keys = ["image", "label"]
+    else:
+        keys = ["image"]
+
     common_transform = [
-        LoadImaged(keys=["image", "label"]),
-        EnsureChannelFirstd(keys=["image", "label"]),
-        Orientationd(keys=["image", "label"], axcodes="RAS"),
-        CenterSpatialCropd(keys=["image", "label"], roi_size=args.roi_size),
-        ScaleIntensityRangePercentilesd(keys="image", lower=0, upper=100.0, b_min=-1, b_max=1, channel_wise=True),
+        LoadImaged(keys=keys),
+        EnsureChannelFirstd(keys=keys),
+        Orientationd(keys=keys, axcodes="RAS"),
+        CenterSpatialCropd(keys=keys, roi_size=args.roi_size),
+        ScaleIntensityRangePercentilesd(keys="image", lower=0, upper=99.5, b_min=-1, b_max=1,
+                                        channel_wise=True, clip=True),
         EnsureTyped(keys="image", dtype=compute_dtype),
     ]
     random_transform = [
-        RandFlipd(keys=["image", "label"], prob=0.5, spatial_axis=0),
-        RandFlipd(keys=["image", "label"], prob=0.5, spatial_axis=1),
-        RandFlipd(keys=["image", "label"], prob=0.5, spatial_axis=2),
+        RandFlipd(keys=keys, prob=0.5, spatial_axis=0),
+        RandFlipd(keys=keys, prob=0.5, spatial_axis=1),
+        RandFlipd(keys=keys, prob=0.5, spatial_axis=2),
     ]
 
     if data_aug:

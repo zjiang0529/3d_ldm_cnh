@@ -1,0 +1,18 @@
+{
+    "data_base_dir": ["/workspace/datasets/CNH_data",
+                     "/workspace/datasets/CNH_data",
+                     "/workspace/datasets/CNH_data",
+                     "/workspace/datasets/CNH_data",
+                     "/workspace/datasets/CNH_data",
+                     "/workspace/datasets/CNH_data"],
+    "json_list": ["./datalist/gli_train_4c.json",
+                  "./datalist/men_train_4c.json",
+                  "./datalist/met_train_4c.json",
+                  "./datalist/ped_train_4c.json",
+                  "./datalist/ssa_train_4c.json",
+                  "./datalist/dmg_train_4c.json"],
+    "model_dir": "/workspace/3d_ldm_cnh_workspace/trained_weights/",
+    "tfevent_path": "/workspace/3d_ldm_cnh_workspace/tfevent/",
+    "resume_ckpt": false,
+    "exp_name": "ngc_160_192_128_2down_md"
+}

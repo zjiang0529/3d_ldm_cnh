@@ -32,7 +32,7 @@ from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 from torch.optim import lr_scheduler
 
-from utils import KL_loss, define_instance, prepare_dataloader, setup_ddp, prepare_json_dataloader, \
+from utils import KL_loss, define_instance, setup_ddp, prepare_json_dataloader, \
     distributed_all_gather, KL_loss_or, KL_loss_or_mean, NLayerDiscriminator3D, weights_init, hinge_d_loss, \
     PerceptualLossL1, Decoder
 from visualize_image import visualize_one_slice_in_3d_image
@@ -212,12 +212,13 @@ def main():
         world_size=world_size,
         cache=1.0,
         download=args.download_data,
-        is_inference=True
+        is_inference=True,
+        load_label=False
     )
     data = next(iter(val_loader))
     print("Batch shape:", data["image"].shape)
 
-    autoencoder = define_autoencoder(args).to(device)
+    autoencoder = define_instance(args, "autoencoder_def").to(device)
     num_params = 0
     for param in autoencoder.parameters():
         num_params += param.numel()
@@ -262,9 +263,12 @@ def main():
             with autocast(enabled=args.amp):
                 reconstruction, z_mu, z_sigma = autoencoder(images)
                 recons_loss = intensity_loss(reconstruction.contiguous(), images.contiguous())
-                p_loss = loss_perceptual(reconstruction.contiguous(), images.contiguous())
+                p_loss = 0
+                for c in range(4):
+                    p_loss += loss_perceptual(reconstruction[:, c:c+1, ...].contiguous(), images[:, c:c+1, ...].contiguous())
+                p_loss /= 4.0
                 reconstruction = (torch.clip(reconstruction, -1., 1.) + 1.) / 2.
-                SaveImage(output_dir=args.model_dir, output_postfix="image", resample=False)(
+                SaveImage(output_dir=args.output_dir, output_postfix="image", resample=False)(
                     reconstruction[0], meta_data={
                         'filename_or_obj': batch["image_meta_dict"]['filename_or_obj'][0].replace(".nii.gz", "")})
         val_recon_epoch_loss += recons_loss.item()
